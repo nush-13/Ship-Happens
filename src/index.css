@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Outfit:wght@400;600;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #f6f5f0;
+  color: #0f172a;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbars to match the Elegant Light Cream theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f5f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom glow borders and glassmorphism elements */
+.elegant-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.02);
+}
+
+.elegant-card-glow {
+  background: #ffffff;
+  border: 1px solid rgba(239, 35, 60, 0.25);
+  box-shadow: 0 0 25px rgba(239, 35, 60, 0.06);
+}
+
+.elegant-input {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.elegant-input:focus {
+  border-color: rgba(239, 35, 60, 0.6);
+  box-shadow: 0 0 12px rgba(239, 35, 60, 0.15);
+  outline: none;
+}
+
+/* Custom fade-in for smooth dashboard entries */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================
+   ELEGANT DARK MODE OVERRIDES (HIGHLY REFINED SURFACES)
+   ========================================== */
+
+/* Configure Tailwind v4 variant dark selector */
+@variant dark (&:where(.dark, .dark *));
+
+.dark {
+  background-color: #0b0f19 !important;
+  color: #f8fafc !important;
+}
+
+.dark body {
+  background-color: #0b0f19 !important;
+  color: #f8fafc !important;
+}
+
+/* Map background colors - Deep, elegant charcoal layered surfaces */
+.dark .bg-\[\#f6f5f0\] {
+  background-color: #0b0f19 !important;
+}
+
+.dark .bg-white {
+  background-color: #121824 !important;
+}
+
+/* bg-slate-50 represents inner nested containers or secondary controls */
+.dark .bg-slate-50 {
+  background-color: #0c101a !important;
+}
+
+/* hover states or distinct interactive surfaces */
+.dark .bg-slate-100 {
+  background-color: #1a2336 !important;
+}
+
+.dark .bg-slate-200 {
+  background-color: #24304a !important;
+}
+
+.dark .bg-slate-300 {
+  background-color: #334366 !important;
+}
+
+.dark .bg-slate-50\/50 {
+  background-color: rgba(12, 16, 26, 0.55) !important;
+}
+
+.dark .bg-slate-50\/80 {
+  background-color: rgba(12, 16, 26, 0.8) !important;
+}
+
+.dark .bg-slate-50\/90 {
+  background-color: rgba(12, 16, 26, 0.9) !important;
+}
+
+.dark .bg-slate-100\/50 {
+  background-color: rgba(26, 35, 54, 0.5) !important;
+}
+
+.dark .bg-slate-200\/50 {
+  background-color: rgba(36, 48, 74, 0.5) !important;
+}
+
+.dark .bg-slate-500\/10 {
+  background-color: rgba(148, 163, 184, 0.08) !important;
+}
+
+/* Badges / alerts / overlays with premium opacity and vibrant accents */
+.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.07) !important;
+}
+
+.dark .bg-emerald-50\/50 {
+  background-color: rgba(16, 185, 129, 0.03) !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.07) !important;
+}
+
+.dark .bg-amber-50\/50 {
+  background-color: rgba(245, 158, 11, 0.03) !important;
+}
+
+.dark .bg-rose-50 {
+  background-color: rgba(239, 35, 60, 0.07) !important;
+}
+
+.dark .bg-rose-50\/50 {
+  background-color: rgba(239, 35, 60, 0.03) !important;
+}
+
+.dark .bg-purple-50 {
+  background-color: rgba(168, 85, 247, 0.07) !important;
+}
+
+.dark .bg-indigo-50 {
+  background-color: rgba(99, 102, 241, 0.07) !important;
+}
+
+.dark .bg-sky-50 {
+  background-color: rgba(14, 165, 233, 0.07) !important;
+}
+
+/* High contrast typography adjustments for readability */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+.dark .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+/* Beautiful color accents for alert and category texts */
+.dark .text-emerald-700 {
+  color: #34d399 !important;
+}
+
+.dark .text-amber-700 {
+  color: #fbbf24 !important;
+}
+
+.dark .text-rose-700 {
+  color: #f87171 !important;
+}
+
+.dark .text-purple-700 {
+  color: #c084fc !important;
+}
+
+.dark .text-indigo-700 {
+  color: #818cf8 !important;
+}
+
+.dark .text-sky-700 {
+  color: #38bdf8 !important;
+}
+
+/* Micro border tuning (low opacity, fine lines) */
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-300 {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark .border-slate-200\/80,
+.dark .border-slate-200\/60,
+.dark .border-slate-200\/50,
+.dark .border-slate-200\/40 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .divide-slate-100 > * + *,
+.dark .divide-slate-200 > * + * {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark .border-slate-100 {
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Form input elements - slightly darker than the cards to create beautiful inset depth */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #0c101a !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #475569 !important;
+}
+
+.dark option {
+  background-color: #0c101a !important;
+  color: #f8fafc !important;
+}
+
+/* Card components with layered gradients & high-end dark drop shadows */
+.dark .elegant-card {
+  background: #121824;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+}
+
+.dark .elegant-card-glow {
+  background: #121824;
+  border: 1px solid rgba(239, 35, 60, 0.35);
+  box-shadow: 0 0 30px rgba(239, 35, 60, 0.08);
+}
+
+.dark .elegant-input {
+  background: #0c101a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+}
+
+.dark .elegant-input:focus {
+  border-color: rgba(239, 35, 60, 0.5);
+  box-shadow: 0 0 12px rgba(239, 35, 60, 0.15);
+}
+
+/* Interactive navigation lists, sidebar links, list options, table rows */
+.dark .hover\:bg-slate-50:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark .hover\:text-slate-800:hover {
+  color: #ffffff !important;
+}
+
+/* Soft dark scrollbars */
+.dark::-webkit-scrollbar-track,
+.dark body::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+.dark::-webkit-scrollbar-thumb,
+.dark body::-webkit-scrollbar-thumb {
+  background: #1e293b;
+}
+
+/* Map visual overrides: clean nighttime HUD mode */
+.dark .leaflet-container {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.dark .even\:bg-slate-50\/50:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.015) !important;
+}
+
+.dark tr:hover {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Map visual indicators / dynamic markers */
+.dark .bg-emerald-500\/10 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+.dark .bg-amber-500\/10 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+}
+
+.dark .bg-[#ef233c]/10 {
+  background-color: rgba(239, 35, 60, 0.12) !important;
+}
+
+.dark .text-amber-500 {
+  color: #fbbf24 !important;
+}
+

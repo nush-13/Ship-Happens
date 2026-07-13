@@ -1,0 +1,6 @@
+{
+  "name": "Ship Happens",
+  "description": "Enterprise transport operations and logistics platform. Manage bookings, routes, fleets, drivers, and receipts in one place.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
